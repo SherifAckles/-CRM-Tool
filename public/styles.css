@@ -1,0 +1,77 @@
+/* Reset  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*********************************************** Utility Components  *************************************************/
+:root {
+
+  /* Colors */
+  --color-primary: #38a3a5;
+    --color-primary-d: #22577a;
+
+    --color-secondary: #80ed99;
+    --color-secondary-d: #57cc99;
+    --color-body: #c7f9cc;
+    --color-font: #1f363d;
+
+  /* box shadow */
+    --box-shadow: 3px 3px 10px 3px grey;
+}
+
+body {
+  background-color: var(--color-body);
+  color: var(--color-font);
+}
+
+.main {
+  height: 90vh;
+}
+
+.padding {
+  padding: 1rem 3rem;
+}
+
+.primary-color {
+  background-color: var(--color-primary-d);
+  color: white;
+}
+
+.services-item {
+  background-color: var(--color-secondary-d);
+  border-radius: 10px;
+  width: 20rem;
+  height: 24rem;
+  color: var(--color-font);
+}
+
+.services-item i {
+  font-size: 5rem;
+}
+/* ------------- LOGIN PAGE -------------- */
+.main {
+  height: 85vh;
+}
+
+.login-inner{
+  width: 35%;
+  min-width: 300px;
+  height: min-content;
+  background-color: white;
+  color: var(--color-font);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+
+.footer {
+  height: 10rem;
+}
+
+.footer i {
+  font-size: 2.5rem;
+}
