@@ -21,6 +21,7 @@
 
   /* box shadow */
     --box-shadow: 3px 3px 10px 3px grey;
+    --box-shadow-small: 1px 1px 5px 1px grey;
 }
 
 body {
@@ -53,7 +54,7 @@ body {
   font-size: 5rem;
 }
 /* ------------- LOGIN PAGE -------------- */
-.main {
+.height {
   height: 85vh;
 }
 
@@ -67,7 +68,34 @@ body {
   box-shadow: var(--box-shadow);
 }
 
+/* --------------- DASHBOARD PAGE ------------ */
 
+.dashboard-icons {
+  background-color: #fcfcfc;
+  width: 19%;
+}
+
+.dashboard-main {
+  background-color: #e2fdff;
+  width: 80%;
+}
+
+.dashboard-icons i {
+  margin-right: 2rem;
+}
+
+.left {
+  width: 25%;
+}
+
+.box-item {
+  background-color: #fcfcfc;
+  box-shadow: var(--box-shadow-small);
+  border-radius: 3px;
+  height: 150px;
+}
+
+/* --------------- FOOTER --------------------- */
 .footer {
   height: 10rem;
 }

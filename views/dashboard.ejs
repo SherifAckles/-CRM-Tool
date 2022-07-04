@@ -41,8 +41,67 @@
   </nav>
 
   <!--**********  MAIN SECTION *********-->
-  <section class="container-fluid main mb-5 padding">
+  <section class="container-fluid padding">
+    <div class="dashboard-outer d-flex justify-content-around">
+      <div class="dashboard-icons list-group p-3">
+          <img src="images/female.png" alt="">
+          <button type="button" class="list-group-item list-group-item-action mb-1">
+            <i class="fa-solid fa-envelope"></i>
+          Emails</button>
+          <button type="button" class="list-group-item list-group-item-action mb-1">
+            <i class="fa-solid fa-warehouse"></i>
+            Suppliers</button>
+          <button type="button" class="list-group-item list-group-item-action mb-1">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          Inventory</button>
+          <button type="button" class="list-group-item list-group-item-action mb-1">
+            <i class="fa-solid fa-money-bill-1"></i>
+          Sales</button>
+          <button type="button" class="list-group-item list-group-item-action mb-1">
+            <i class="fa-solid fa-cash-register"></i>
+          Sales by Supplier</button>
+          <button type="button" class="list-group-item list-group-item-action mb-1">
+            <i class="fa-solid fa-receipt"></i>
+          Sales by Product</button>
+          </div>
+      <div class="dashboard-main p-3">
+        <div class="">
+          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+  </ol>
+</nav>
+        </div>
 
+        <h2>Hi User_id. Welcome back!</h2>
+        <div class="d-flex justify-content-between">
+          <div class="left">
+            <div class="box-item mb-3 p-2">
+              <h3>Emails</h3>
+              <p>No unread messages!</p>
+            </div>
+            <div class="box-item mb-3 p-2">
+              <h3>Low Stocks</h3>
+              <ul>
+                <li>product_id - 5 pieces left</li>
+                <li>product_id - 5 pieces left</li>
+                <li>product_id - 5 pieces left</li>
+
+                <span>View more...</span>
+              </ul>
+            </div>
+            <div class="box-item p-2">
+              <h3>SOMETHING IMPORTANT</h3>
+            </div>
+          </div>
+          <div class="right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Charts_SVG_Example_7_-_Grouped_Line_Chart.svg" alt=""
+            class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!--**********  FOOTER SECTION *********  -->
