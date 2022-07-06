@@ -17,115 +17,124 @@
 </head>
 
 <body>
-  <!--**********  NAVBAR SECTION ***********-->
-  <nav class="navbar navbar-expand-lg primary-color navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+  <!--**********  NAVBAR TOP SECTION ***********-->
+  <!-- <header class="navbar navbar-dark primary-color sticky-top container-fluid row p-0 m-0">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 border-end" href="#">WorkSmart</a>
+    <div class="py-0 col-10 d-flex justify-content-between align-items-center">
+      <nav class="py-0 "style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+      </nav>
+      <!-- <ul class="navbar-nav d-flex justify-content-end align-items-center"> -->
+        <!-- <ul class="list-unstyled d-flex flex-row justify-content-end align-items-center">
+          <li class="px-2"><i class="fa-solid fa-bell"></i>
+            <span class="d-none">Notifications</span>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login">Login/Subscribe</a>
+          <li class="px-2"><i class="fa-solid fa-gear"></i>
+            <span class="d-none">Settings</span>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+          <li class="px-2 border-start"><a class="nav-link" href="#"></a>Logout
           </li>
         </ul>
+    </div>
+  </header> -->
+
+  <header class="nav-top container-fluid row primary-color m-0 p-0">
+    <h3 class="col-2 px-3 py-0 border-end">WorkSmart</h3>
+    <div class="col-10 border d-flex justify-content-between align-items-center py-0">
+      <nav class="py-0 border" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb py-0">
+          <li class="breadcrumb-item m-0"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active m-0" aria-current="page">Dashboard</li>
+        </ol>
+      </nav>
+
+      <ul class="list-unstyled border d-flex justify-content-end align-items-center">
+        <li class="px-2"><i class="fa-solid fa-bell"></i>
+          <span class="d-none">Notifications</span>
+        </li>
+        <li class="px-2"><i class="fa-solid fa-gear"></i>
+          <span class="d-none">Settings</span>
+        </li>
+        <li class="px-2 border-start"><a class="nav-link" href="#"></a>Logout
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!--**********  DASHBOARD SECTION *********-->
+  <section class="container-fluid row p-0 m-0">
+    <!-- LEFT DASHBOARD ICONS -->
+    <div class="dashboard-icons p-3 col-2 border-end">
+      <div class="list-group">
+
+        <button type="button" class="list-group-item list-group-item-action mb-1">
+          <i class="fa-solid fa-envelope"></i>
+          Emails</button>
+        <button type="button" class="list-group-item list-group-item-action mb-1">
+          <i class="fa-solid fa-warehouse"></i>
+          Suppliers</button>
+        <button type="button" class="list-group-item list-group-item-action mb-1">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          Inventory</button>
+        <button type="button" class="list-group-item list-group-item-action mb-1">
+          <i class="fa-solid fa-money-bill-1"></i>
+          Sales</button>
+        <button type="button" class="list-group-item list-group-item-action mb-1">
+          <i class="fa-solid fa-cash-register"></i>
+          Sales by Supplier</button>
+        <button type="button" class="list-group-item list-group-item-action mb-1">
+          <i class="fa-solid fa-receipt"></i>
+          Sales by Product</button>
       </div>
     </div>
-  </nav>
 
-  <!--**********  MAIN SECTION *********-->
-  <section class="container-fluid padding">
-    <div class="dashboard-outer d-flex justify-content-around">
-      <div class="dashboard-icons list-group p-3">
-          <img src="images/female.png" alt="">
-          <button type="button" class="list-group-item list-group-item-action mb-1">
-            <i class="fa-solid fa-envelope"></i>
-          Emails</button>
-          <button type="button" class="list-group-item list-group-item-action mb-1">
-            <i class="fa-solid fa-warehouse"></i>
-            Suppliers</button>
-          <button type="button" class="list-group-item list-group-item-action mb-1">
-            <i class="fa-solid fa-boxes-stacked"></i>
-          Inventory</button>
-          <button type="button" class="list-group-item list-group-item-action mb-1">
-            <i class="fa-solid fa-money-bill-1"></i>
-          Sales</button>
-          <button type="button" class="list-group-item list-group-item-action mb-1">
-            <i class="fa-solid fa-cash-register"></i>
-          Sales by Supplier</button>
-          <button type="button" class="list-group-item list-group-item-action mb-1">
-            <i class="fa-solid fa-receipt"></i>
-          Sales by Product</button>
+    <!-- RIGHT DASHBOARD RESULTS -->
+    <div class="dashboard-main p-3 col-10">
+
+      <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-start">
+          <div class="img-container">
+            <img src="/images/female.png" alt="" class="img-fluid">
           </div>
-      <div class="dashboard-main p-3">
-        <div class="">
-          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-  </ol>
-</nav>
+          <h3>Hi User_id. Welcome back!</h3>
         </div>
-
-        <h2>Hi User_id. Welcome back!</h2>
-        <div class="d-flex justify-content-between">
-          <div class="left">
-            <div class="box-item mb-3 p-2">
-              <h3>Emails</h3>
-              <p>No unread messages!</p>
-            </div>
-            <div class="box-item mb-3 p-2">
-              <h3>Low Stocks</h3>
-              <ul>
-                <li>product_id - 5 pieces left</li>
-                <li>product_id - 5 pieces left</li>
-                <li>product_id - 5 pieces left</li>
-
-                <span>View more...</span>
-              </ul>
-            </div>
-            <div class="box-item p-2">
-              <h3>SOMETHING IMPORTANT</h3>
-            </div>
-          </div>
-          <div class="right">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Charts_SVG_Example_7_-_Grouped_Line_Chart.svg" alt=""
-            class="img-fluid">
-          </div>
+        <div class="text-left">
+          <h3>5.7.2022</h3>
         </div>
       </div>
+
+      <div class="d-flex justify-content-between">
+        <div class="left">
+          <div class="box-item mb-3 p-2">
+            <h3>Emails</h3>
+            <p>No unread messages!</p>
+          </div>
+          <div class="box-item mb-3 p-2">
+            <h3>Low Stocks</h3>
+            <ul>
+              <li>product_id - 5 pieces left</li>
+              <li>product_id - 5 pieces left</li>
+              <li>product_id - 5 pieces left</li>
+
+              <span>View more...</span>
+            </ul>
+          </div>
+          <div class="box-item p-2">
+            <h3>SOMETHING IMPORTANT</h3>
+          </div>
+        </div>
+        <div class="right">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Charts_SVG_Example_7_-_Grouped_Line_Chart.svg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 
-  <!--**********  FOOTER SECTION *********  -->
-  <footer class="primary-color text-center padding">
-    <div class="d-flex justify-content-between">
-      <p>All Rights Reserved. &copy; TeamGold</p>
-      <div class="d-flex justify-content-center align-items-center">
-        <a href="#" class="px-3">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="px-3">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="px-3">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="#" class="px-3">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-
-  </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

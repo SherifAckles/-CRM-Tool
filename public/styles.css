@@ -29,6 +29,10 @@ body {
   color: var(--color-font);
 }
 
+i {
+  font-size: 1.2rem;
+}
+
 .main {
   height: 90vh;
 }
@@ -70,20 +74,26 @@ body {
 
 /* --------------- DASHBOARD PAGE ------------ */
 
+.nav-item i {
+  color: white;
+}
+
 .dashboard-icons {
   background-color: #fcfcfc;
-  width: 19%;
 }
 
 .dashboard-main {
-  background-color: #e2fdff;
-  width: 80%;
+  background-color: #f2f2f2;
 }
 
 .dashboard-icons i {
   margin-right: 2rem;
 }
 
+.img-container {
+  width: 8rem;
+  height: 8rem;
+}
 .left {
   width: 25%;
 }

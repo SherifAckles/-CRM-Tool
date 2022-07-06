@@ -21,6 +21,11 @@ app.get('/login', (req, res) => {
   res.render('login');
 })
 
+// this is just for designing purposes, must be deleted once deployed because dashboard must depend on who was logged in
+app.get('/dashboard', (req, res) => {
+  res.render('dashboard');
+})
+
 app.post('/dashboard', (req, res) => {
   console.log('you are logged in')
   res.render('dashboard');
