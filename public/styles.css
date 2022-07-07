@@ -11,13 +11,11 @@
 :root {
 
   /* Colors */
-  --color-primary: #38a3a5;
-    --color-primary-d: #22577a;
-
-    --color-secondary: #80ed99;
-    --color-secondary-d: #57cc99;
-    --color-body: #c7f9cc;
-    --color-font: #1f363d;
+    --color-primary: #284b63;
+    --color-secondary: #38a3a5;
+    --color-secondary-d: #3c6e71;
+    --color-body: #d9d9d9;
+    --color-font: #353535;
 
   /* box shadow */
     --box-shadow: 3px 3px 10px 3px grey;
@@ -27,6 +25,7 @@
 body {
   background-color: var(--color-body);
   color: var(--color-font);
+  font-size: .9rem;
 }
 
 i {
@@ -42,7 +41,7 @@ i {
 }
 
 .primary-color {
-  background-color: var(--color-primary-d);
+  background-color: var(--color-primary);
   color: white;
 }
 
@@ -51,11 +50,12 @@ i {
   border-radius: 10px;
   width: 20rem;
   height: 24rem;
-  color: var(--color-font);
+  color: white;
 }
 
 .services-item i {
   font-size: 5rem;
+  color: var(--color-body);
 }
 /* ------------- LOGIN PAGE -------------- */
 .height {
@@ -78,24 +78,43 @@ i {
   color: white;
 }
 
-.dashboard-icons {
-  background-color: #fcfcfc;
-}
-
-.dashboard-main {
-  background-color: #f2f2f2;
-}
-
-.dashboard-icons i {
-  margin-right: 2rem;
-}
-
 .img-container {
   width: 8rem;
   height: 8rem;
 }
+
+#sidebarMenu {
+  background-color: #d9dcd6;
+}
+
+#sidebarMenu li {
+  line-height: 2rem;
+}
+
+#sidebarMenu i {
+  margin-right: 2rem;
+  width: 16px;
+  height: 16px;
+  color: #5d5d5d;
+}
+
+#sidebarMenu .nav-link {
+  font-weight: 500;
+  color: #333;
+  vertical-align: text-bottom;
+}
+
+.dashboard-main {
+  background-color: white;
+  right: 0;
+}
 .left {
   width: 25%;
+}
+
+.right {
+  width: 73%;
+  height: auto;
 }
 
 .box-item {
