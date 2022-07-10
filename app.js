@@ -40,6 +40,10 @@ app.post('/dashboard', (req, res) => {
   res.render('dashboard');
 })
 
+app.get('/dashboard/products', (req, res) => {
+  res.render('pages/products/products');
+})
+
 app.listen(4000, () => {
   console.log('Serving port 4000')
 });

@@ -123,6 +123,19 @@ i {
   border-radius: 3px;
   height: 150px;
 }
+/* --------------- PRODUCTS PAGE ---------------*/
+.results {
+  position: relative;
+}
+
+.results-item {
+  width: 24rem;
+  height: 24rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
 
 /* --------------- FOOTER --------------------- */
 .footer {
