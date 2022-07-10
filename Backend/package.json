@@ -1,12 +1,13 @@
 {
-  "name": "backend",
+  "name": "Backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Server.js",
+  "type": "module",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "Start": "nodemon server.js"
   },
-  "author": "",
+  "author": "Stephen Hammonds",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",

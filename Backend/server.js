@@ -1,10 +1,10 @@
 require('dotenv').config()
-const express = require('express')
+import express from 'express'
 const app = express()
-const mongoose = require('mongoose')
+import { connect, connection } from 'mongoose'
 
-mongoose.connect(process.env.DATABASE_URL)
-const db = mongoose.connection
+connect(process.env.DATABASE_URL)
+const db = connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
 
