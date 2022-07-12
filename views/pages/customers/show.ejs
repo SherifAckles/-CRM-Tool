@@ -1,0 +1,25 @@
+<%- layout('layout/dashboard-template')%>
+<div class="">
+  <h1>Customers</h1>
+  <div class="">
+   <% for (let c of customers) { %>
+     <div class="card mb-3">
+     <div class="row">
+       <ul class="list-unstyled">
+         <li class="col-3">Name</li>
+         <li class="col-3">Phone Number</li>
+         <li class="col-3">Email Address</li>
+         <li class="col-3">Address</li>
+       </ul>
+     </div>
+
+    <div class="row">
+      <ul>
+        <li class="col-3"><%= customer.name %></li>
+        <li class="col-3"><%= customer.number %></li>
+        <li class="col-3"><%= customer.email %></li>
+        <li class="col-3"><%= customer.address %></li>
+      </ul>
+    </div>
+   <% } %>
+   <div>

@@ -1,95 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/f82df14a80.js" crossorigin="anonymous"></script>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="/styles.css" />
-  <title>CRM Genie</title>
-</head>
-
-<body>
-  <!--**********  NAVBAR TOP SECTION ***********-->
-  <header class="navbar navbar-dark sticky-top primary-color flex-md-nowrap py-0 shadow m-0">
-    <h3 class="navbar-text border-end col-md-3 col-lg-2 me-0 px-3">WorkSmart</h3>
-    <div class="py-0 m-0">
-      <ul class="list-unstyled d-flex justify-content-end py-0 m-0">
-        <li class="navbar-text text-nowrap px-2"><i class="fa-solid fa-bell"></i>
-          <span class="d-none">Notifications</span>
-        </li>
-        <li class="navbar-text text-nowrap px-2"><i class="fa-solid fa-gear"></i>
-          <span class="d-none">Settings</span>
-        </li>
-        <li class="navbar-text py-0 border-start text-nowrap">
-          <a class="nav-link px-3" href="#">Sign out</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-  <!--**********  DASHBOARD SECTION *********-->
-  <section class="container-fluid">
-    <div class="row">
-      <!-- LEFT DASHBOARD ICONS -->
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 border-end bg-light">
-        <div class="position-sticky pt-4">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/dashboard">
-                <i class="fa-solid fa-house-flag"></i>
-                <span>Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Messages</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa-solid fa-truck"></i>
-                <span>Orders</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dashboard/products">
-                <i class="fa-solid fa-boxes-stacked"></i>
-                <span>Inventory</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa-solid fa-users"></i>
-                <span>Customers</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa-solid fa-warehouse"></i>
-                <span>Suppliers</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa-solid fa-file-lines"></i>
-                <span>Reports</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<%- layout('layout/dashboard-template')%>
 
       <!-- RIGHT DASHBOARD RESULTS -->
-      <main class="dashboard-main p-3 col-md-9 col-lg-10">
 
         <div class="d-flex justify-content-between mb-3">
           <div class="d-flex justify-content-start">
@@ -99,7 +10,10 @@
             <h3>Hi User_id. Welcome back!</h3>
           </div>
           <div class="text-left">
-            <h3>5.7.2022</h3>
+<% const month = ["January","February","March","April","May","June","July","August","September","October","November","December"]; %>
+            <% const today = new Date() %>
+<h3> Today is <%= month[today.getMonth()] +' '+today.getDate() +', '+ today.getFullYear()%> </h3>
+
           </div>
         </div>
 
@@ -123,11 +37,3 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Charts_SVG_Example_7_-_Grouped_Line_Chart.svg" alt="" class="img-fluid">
           </div>
         </div>
-      </main>
-    </div>
-  </section>
-<%- include('partials/footer')%>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-
-</html>
