@@ -32,6 +32,12 @@ i {
   font-size: 1.2rem;
 }
 
+img {
+  width: 100%;
+}
+
+/* ------- Hompepage ---------------- */
+
 .main {
   height: 90vh;
 }
@@ -123,6 +129,7 @@ i {
   border-radius: 3px;
   height: 150px;
 }
+
 /* --------------- PRODUCTS PAGE ---------------*/
 .results {
   position: relative;
@@ -137,6 +144,12 @@ i {
   bottom: 0;
 }
 
+/* --------------- PRODUCTS PAGE ---------------*/
+
+.reg-form {
+  width: 60%;
+  border-radius: 10px;
+}
 /* --------------- FOOTER --------------------- */
 .footer {
   height: 10rem;

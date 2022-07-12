@@ -1,0 +1,36 @@
+<%- layout('layout/dashboard-template')%>
+<div class="">
+  <h1>Suppliers</h1>
+
+     <div class="card mb-3">
+     <div class="">
+       <ul class="row list-unstyled">
+         <li class="col-1"></li>
+         <li class="col-3"><h5>Company Name</h5></li>
+         <li class="col-2"><h5>Phone Number</h5></li>
+         <li class="col-2"><h5>Email Address</h5></li>
+         <li class="col-3"><h5>Address</h5></li>
+         <li class="col-1"></li>
+       </ul>
+     </div>
+
+    <div class="">
+
+
+        <% for (let supplier of suppliers) { %>
+          <ul class="row list-unstyled">
+          <li class="col-1"><a class="btn btn-primary btn-sm" href="/dashboard/suppliers/<%= supplier._id %>/edit">Edit</a></li>
+        <li class="col-3"><%= supplier.name %></li>
+        <li class="col-2"><%= supplier.tel %></li>
+        <li class="col-2"><%= supplier.email %></li>
+        <li class="col-3"><%= supplier.address %></li>
+        <li class="col-1"><form class="" action="/dashboard/suppliers/<%=supplier._id%>?_method=DELETE" method="post">
+          <button class="btn btn-danger btn-sm">Delete</button>
+        </form></li>
+      </ul>
+      <% } %>
+    </div>
+
+   </div>
+
+<a class="btn btn-primary" href="/dashboard/suppliers/new">Add new</a>

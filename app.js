@@ -4,6 +4,7 @@ const path = require('path');
 const ejs = require('ejs');
 const ejsMate = require('ejs-mate');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override'); //to be able to use app.put
 
 // require model database
 const Product = require('./models/products');
@@ -67,13 +68,51 @@ app.get('/dashboard/customers', (req, res) => {
 })
 
 // SUPPLIER'S SECTION
-app.get('/dashboard/suppliers', (req, res) => {
-  res.render('pages/suppliers/show');
+app.get('/dashboard/suppliers', async (req, res) => {
+  const suppliers = await Supplier.find({});
+  res.render('pages/suppliers/show', {suppliers});
 })
 
 app.get('/dashboard/suppliers/new', (req, res) => {
   res.render('pages/suppliers/new');
 })
+
+app.get('/dashboard/suppliers/:id', async (req, res) => {
+  const { id } = req.params;
+  const supplier = await Supplier.findById(id);
+  res.render('pages/suppliers/show', {supplier});
+} )
+
+// to add a new supplier
+app.post('/dashboard/suppliers', async(req, res) => {
+  const supplier = new Supplier(req.body.supplier);
+  await supplier.save();
+  res.redirect(`/dashboard/${supplier._id}`);
+})
+
+// EDIT ROUTES
+app.get('/dashboard/suppliers/:id/edit', async (req, res) => {
+  const { id } = req.params;
+  const supplier = await Supplier.findById(id);
+  res.render('pages/suppliers/edit', {supplier});
+} )
+
+app.put('/dashboard/suppliers', async(req, res) => {
+  const { id } = req.params;
+  const supplier = await Supplier.findByIdAndUpdate(id, req.body, {runValidators: true, new: true})
+  console.log(req.body);
+  res.redirect('pages/suppliers/show', {supplier})
+})
+
+// Delete route
+app.delete('/dashboard/suppliers/:id', async(req, res) => {
+  const { id } = req.params;
+  const deleted = await Supplier.findByIdAndDelete(id);
+  console.log(`${deleted.name} has been deleted`)
+  res.redirect('/dashboard/suppliers/show');
+})
+
+/*----------------------*/
 
 app.listen(4000, () => {
   console.log('Serving port 4000')
