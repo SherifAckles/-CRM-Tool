@@ -58,8 +58,21 @@ app.post('/dashboard', (req, res) => {
 })
 
 // PRODUCT'S SECTION
-app.get('/dashboard/products', (req, res) => {
-  res.render('pages/products/show');
+app.get('/dashboard/products', async (req, res) => {
+  const products = await Product.find({});
+  console.log('showing products page');
+  res.render('pages/products/show', {products, categories});
+})
+
+app.get('/dashboard/products/new', async (req, res) => {
+  const suppliers = await Supplier.find({});
+  res.render('pages/products/new', {suppliers, categories});
+})
+
+app.post('/dashboard/products', async(req, res) => {
+  const product = new Product(req.body.supplier);
+  await product.save();
+  res.redirect('/dashboard/products');
 })
 
 // CUSTOMER'S SECTION
@@ -105,7 +118,7 @@ app.put('/dashboard/suppliers', async(req, res) => {
 })
 
 // Delete route
-app.delete('/dashboard/suppliers/:id', async(req, res) => {
+app.delete('/dashboard/suppliers', async(req, res) => {
   const { id } = req.params;
   const deleted = await Supplier.findByIdAndDelete(id);
   console.log(`${deleted.name} has been deleted`)

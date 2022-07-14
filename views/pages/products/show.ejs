@@ -2,24 +2,95 @@
 <div class="">
   <h1>Products</h1>
   <div class="d-flex justify-content-center align-items-center">
-  <h5>Filter by:</h5>
-  <ul class="list-unstyled">
-    <li class="btn btn-primary px-1 secondary-color">Small Pack</li>
-    <li class="btn btn-primary px-1 secondary-color">Big Pack</li>
-    <li class="btn btn-primary px-1 secondary-color">Combo Pack</li>
-  </ul>
-    </div>
+    <h5 class="px-3">Filter by:</h5>
+    <button class="btn btn-primary btn-sm mx-2" data-bs-toggle="collapse"
+    data-bs-target="#small-pack" aria-expanded="false"
+    aria-controls="small-pack">Small Pack</button>
+    <button class="btn btn-primary btn-sm mx-2" data-bs-toggle="collapse"
+      data-bs-target="#big-pack" aria-expanded="false"
+      aria-controls="big-pack">Big Pack</li>
+    <button class="btn btn-primary btn-sm mx-2" data-bs-toggle="collapse"
+      data-bs-target="#combo-pack" aria-expanded="false"
+      aria-controls="combo-pack">Combo Pack</li>
   </div>
-<div class="results p-3 mb-3">
-  <div class="results-item primary-color">
 
-  </div>
-  <div class="results-item secondary-color">
 
-  </div>
-  <div class="results-item bg-light">
+  <table class="table">
+    <thead class="table-light">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Intensity</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Price</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
 
-  </div>
+    <!-------- BIG PACKS' PRODUCTS ---------------->
+    <tbody class="table-primary collapse" id="big-pack">
+      <% for (let product of products) { %>
+      <% if (product.category === 'big') { %>
+      <tr>
+        <th scope="row"><a class="btn btn-primary btn-sm"
+          href="/dashboard/products/<%= product._id %>/edit">
+            Edit</a></th>
+        <td><%= product.name %></td>
+        <td><%= product.intensity %></td>
+        <td><%= product.weight %></td>
+        <td><%= product.price %></td>
+        <td>
+          <form class="" action="/dashboard/suppliers?_method=DELETE" method="post">
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% } else { break } %>
+      <% } %>
+    </tbody>
+
+    <!-------- COMBO PACKS' PRODUCTS ---------------->
+    <tbody class="table-primary collapse" id="combo-pack">
+      <% for (let product of products) { %>
+      <% if (product.category === 'combo') { %>
+      <tr>
+        <th scope="row"><a class="btn btn-primary btn-sm" href="/dashboard/products/<%= product._id %>/edit">
+            Edit</a></th>
+        <td><%= product.name %></td>
+        <td><%= product.intensity %></td>
+        <td><%= product.weight %></td>
+        <td><%= product.price %></td>
+        <td>
+          <form class="" action="/dashboard/suppliers?_method=DELETE" method="post">
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% } else { break } %>
+      <% } %>
+    </tbody>
+
+  <tbody class="table-primary collapse" id="small-pack">
+    <% for (let product of products) { %>
+    <% if (product.category === 'small') { %>
+    <tr>
+      <th scope="row"><a class="btn btn-primary btn-sm"
+        href="/dashboard/products/<%= product._id %>/edit">Edit</a></th>
+      <td><%= product.name %></td>
+      <td><%= product.intensity %></td>
+      <td><%= product.weight %></td>
+      <td><%= product.price %></td>
+      <td>
+        <form class="" action="/dashboard/suppliers?_method=DELETE" method="post">
+          <button class="btn btn-danger btn-sm">Delete</button>
+        </form>
+      </td>
+    </tr>
+    <% } else { break } %>
+    <% } %>
+  </tbody>
+</table>
+
+  <a class="btn btn-primary btn-sm"
+  href="/dashboard/products/new">Add new</a>
 </div>
-
-<button class="btn btn-primary">Add new</button>

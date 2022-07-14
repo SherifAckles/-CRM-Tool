@@ -24,7 +24,7 @@
         <li class="col-2"><%= supplier.tel %></li>
         <li class="col-2"><%= supplier.email %></li>
         <li class="col-3"><%= supplier.address %></li>
-        <li class="col-1"><form class="" action="/dashboard/suppliers/<%=supplier._id%>?_method=DELETE" method="post">
+        <li class="col-1"><form class="" action="/dashboard/suppliers?_method=DELETE" method="post">
           <button class="btn btn-danger btn-sm">Delete</button>
         </form></li>
       </ul>

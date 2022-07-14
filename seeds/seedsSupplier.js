@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // require model database
-const Supplier = require('./models/supplier');
+const Supplier = require('../models/supplier');
 
 mongoose.connect('mongodb://localhost:27017/crm', { useNewUrlParser: true })
   .then(() => {

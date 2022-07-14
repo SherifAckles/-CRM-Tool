@@ -131,19 +131,14 @@ img {
 }
 
 /* --------------- PRODUCTS PAGE ---------------*/
-.results {
-  position: relative;
+
+.active {
+  z-index: 100;
 }
 
-.results-item {
-  width: 24rem;
-  height: 24rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
+.hidden {
+  display: none;
 }
-
 /* --------------- PRODUCTS PAGE ---------------*/
 
 .reg-form {
