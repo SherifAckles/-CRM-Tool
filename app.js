@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -11,7 +12,7 @@ const Product = require('./models/products');
 const Supplier = require('./models/supplier');
 const categories = ['small', 'big', 'combo']
 
-mongoose.connect('mongodb://localhost:27017/crm', { useNewUrlParser: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
   .then(() => {
     console.log("Mongo connection open!!!");
   })
