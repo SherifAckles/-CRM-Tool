@@ -57,13 +57,14 @@ img {
 
 .feature-box {
   text-align: center;
-  padding: 5%;
+  padding: 3%;
+  
+  
+  
   }
-.skyline-img {
-  background-size: cover;
-}
+
 .card {
-  padding: 10%;
+  
   background-color: #38a3a5;
   justify-content: center;
   text-align: center;
@@ -73,13 +74,16 @@ img {
   box-shadow: var(--box-shadow-small);margin: 0 50px;
 }
 .icon {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   color: var(--color-primary);
 }
 .icon:hover {
   color: #0c0d0d;
 }
 
+.feature-box-p{padding: 5%;
+
+}
 .services-item i {
   font-size: 5rem;
   color: var(--color-body);
