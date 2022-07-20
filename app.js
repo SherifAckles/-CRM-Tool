@@ -11,7 +11,7 @@ const methodOverride = require('method-override'); //to be able to use app.put
 const productRoutes = require('./routes/products');
 const supplierRoutes = require('./routes/supplier');
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/crm',{ useNewUrlParser: true })
   .then(() => {
     console.log("Mongo connection open!!!");
   })

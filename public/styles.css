@@ -9,23 +9,27 @@
 
 /*********************************************** Utility Components  *************************************************/
 :root {
-
   /* Colors */
-    --color-primary: #284b63;
-    --color-secondary: #38a3a5;
-    --color-secondary-d: #3c6e71;
-    --color-body: #d9d9d9;
-    --color-font: #353535;
+  --color-primary: #284b63;
+  --color-secondary: #38a3a5;
+  --color-secondary-d: #3c6e71;
+  --color-body: #d9d9d9;
+  --color-font: #353535;
 
   /* box shadow */
-    --box-shadow: 3px 3px 10px 3px grey;
-    --box-shadow-small: 1px 1px 5px 1px grey;
+  --box-shadow: 3px 3px 10px 3px grey;
+  --box-shadow-small: 1px 1px 5px 1px grey;
 }
 
 body {
   background-color: var(--color-body);
   color: var(--color-font);
-  font-size: .9rem;
+  font-size: 0.9rem;
+}
+/* BEAUTIFY THE NAV */
+
+.nav-item {
+  margin: 0 2rem;
 }
 
 i {
@@ -51,12 +55,29 @@ img {
   color: white;
 }
 
-.services-item {
-  background-color: var(--color-secondary-d);
-  border-radius: 10px;
-  width: 20rem;
-  height: 24rem;
-  color: white;
+.feature-box {
+  text-align: center;
+  padding: 5%;
+  }
+.skyline-img {
+  background-size: cover;
+}
+.card {
+  padding: 10%;
+  background-color: #38a3a5;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow-small);margin: 0 50px;
+}
+.icon {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+.icon:hover {
+  color: #0c0d0d;
 }
 
 .services-item i {
@@ -68,7 +89,7 @@ img {
   height: 85vh;
 }
 
-.login-inner{
+.login-inner {
   width: 35%;
   min-width: 300px;
   height: min-content;
@@ -146,10 +167,15 @@ img {
   border-radius: 10px;
 }
 /* --------------- FOOTER --------------------- */
-.footer {
-  height: 10rem;
+.copyrights {
+  text-align: center;
+  color: #d9dcd6;
+  padding-top: 16px;
 }
 
 .footer i {
   font-size: 2.5rem;
+}
+.footer1 {
+  background-color: #284b63;
 }
