@@ -41,7 +41,9 @@ i {
 }
 
 /* ------- Hompepage ---------------- */
-
+.main {
+  height: 90vh;
+}
 .padding {
   padding: 1rem 3rem;
 }
@@ -104,13 +106,15 @@ i {
   height: 8rem;
   margin: 3rem 0 1rem;
 }
-
-#sidebarMenu {
- 
+.hi-user{
+  margin-top: 100px;
+}
+#sidebarMenu { background-color: #d9dcd6;
 }
 
 #sidebarMenu li {
-  line-height: 2rem;color:
+  line-height: 2rem;
+  color: ;
 }
 
 #sidebarMenu i {
@@ -125,7 +129,6 @@ i {
   color: #333;
   vertical-align: text-bottom;
 }
-
 
 .stocks-box {
   text-align: center;

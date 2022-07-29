@@ -1,19 +1,22 @@
 <%- layout('layout/dashboard-template')%>
 
+
 <!-- RIGHT DASHBOARD RESULTS -->
+
+  
 
 <div class="d-flex justify-content-between mb-3">
   <div class="d-flex justify-content-start">
     <div class="img-container">
       <img src="/images/female.png" alt="" class="img-fluid" />
     </div>
-    <h3>Hi User_id. Welcome back!</h3>
+    <h3 class="hi-user">Hi User_id. Welcome back!</h3>
   </div>
   <div class="text-left">
     <% const
     month=["January","February","March","April","May","June","July","August","September","October","November","December"];
     %> <% const today=new Date() %>
-    <h3>
+    <h3 class="hi-user">
       Today is <%= month[today.getMonth()] +' '+today.getDate() +' , '+
       today.getFullYear()%>
     </h3>
