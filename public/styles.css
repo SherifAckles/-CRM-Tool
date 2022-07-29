@@ -23,10 +23,14 @@
 
 body {
   background-color: var(--color-body);
+  background-image: url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: var(--color-font);
   font-size: 0.9rem;
 }
-/* BEAUTIFY THE NAV */
+/* BEAUTIFY THE main page NAV */
 
 .nav-item {
   margin: 0 1rem;
@@ -36,15 +40,7 @@ i {
   font-size: 1.2rem;
 }
 
-img {
-  width: 100%;
-}
-
 /* ------- Hompepage ---------------- */
-
-.main {
-  height: 90vh;
-}
 
 .padding {
   padding: 1rem 3rem;
@@ -54,24 +50,25 @@ img {
   background-color: var(--color-primary);
   color: white;
 }
+/* features */
 
+#features {
+  margin-top: 20rem;
+}
 .feature-box {
   text-align: center;
   padding: 3%;
-  
-  
-  
-  }
+}
 
 .card {
-  
   background-color: #38a3a5;
   justify-content: center;
   text-align: center;
   font-weight: bold;
   font-size: 16px;
   border-radius: 2rem;
-  box-shadow: var(--box-shadow-small);margin: 0 50px;
+  box-shadow: var(--box-shadow-small);
+  margin: 0 50px;
 }
 .icon {
   margin: 1rem 0;
@@ -81,13 +78,10 @@ img {
   color: #0c0d0d;
 }
 
-.feature-box-p{padding: 5%;
+.feature-box-p {
+  padding: 5%;
+}
 
-}
-.services-item i {
-  font-size: 5rem;
-  color: var(--color-body);
-}
 /* ------------- LOGIN PAGE -------------- */
 .height {
   height: 85vh;
@@ -105,21 +99,18 @@ img {
 
 /* --------------- DASHBOARD PAGE ------------ */
 
-.nav-item i {
-  color: white;
-}
-
 .img-container {
   width: 8rem;
   height: 8rem;
+  margin: 3rem 0 1rem;
 }
 
 #sidebarMenu {
-  background-color: #d9dcd6;
+ 
 }
 
 #sidebarMenu li {
-  line-height: 2rem;
+  line-height: 2rem;color:
 }
 
 #sidebarMenu i {
@@ -135,24 +126,16 @@ img {
   vertical-align: text-bottom;
 }
 
-.dashboard-main {
-  background-color: white;
-  right: 0;
-}
-.left {
-  width: 25%;
-}
 
-.right {
-  width: 73%;
-  height: auto;
+.stocks-box {
+  text-align: center;
 }
 
 .box-item {
   background-color: #fcfcfc;
   box-shadow: var(--box-shadow-small);
   border-radius: 3px;
-  height: 150px;
+  margin-right: 1rem;
 }
 
 /* --------------- PRODUCTS PAGE ---------------*/
@@ -174,18 +157,19 @@ img {
 .copyrights {
   text-align: center;
   color: #d9dcd6;
-  padding-top: 16px;
+  padding-top: 1rem;
 }
 
 .footer i {
   font-size: 2.5rem;
 }
 
-.footer-icon{
- margin: 0 1rem;margin-bottom: 1rem;
+.footer-icon {
+  margin: 0 1rem;
+  margin-bottom: 1rem;
 }
 
-.footer1 {
+.footer {
   background-color: #284b63;
-  
+  margin-top: 30rem;
 }
